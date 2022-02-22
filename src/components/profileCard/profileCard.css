@@ -1,0 +1,30 @@
+.profile-card {
+  padding: 2rem;
+  display: flex;
+  border-bottom: 1px solid #ededed;
+}
+
+.profile-card img {
+  display: inline-block;
+  width: 150px;
+  border: 1px solid #dddddd;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+.card-info {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  padding-bottom: 1.1rem;
+  font-size: 44px;
+}
+
+.card-content {
+  margin-left: 1.1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
