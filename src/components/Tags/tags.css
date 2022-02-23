@@ -1,0 +1,7 @@
+.tag-list > li {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-right: 0.3rem;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+}

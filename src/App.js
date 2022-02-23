@@ -7,6 +7,7 @@ function App() {
   const [data, setData] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const [searchTag, setSearchTag] = useState("");
 
   useEffect(() => {
     fetch("https://api.hatchways.io/assessment/students")
@@ -26,9 +27,16 @@ function App() {
     setFilterData(data.filter((item) => `${item.firstName} ${item.lastName}`.toLowerCase().includes(value)));
   };
 
+  const handleSearchTag = (e) => {
+    const { value } = e.target;
+    setSearchTag(value);
+    setFilterData(data.filter((item) => `${item.tags}`.toString().toLowerCase().includes(value)));
+  };
+
   return (
     <div className="App">
       <InputField value={searchText} onChange={handleSearchText} placeholder="Search by name" />
+      <InputField value={searchTag} onChange={handleSearchTag} placeholder="Search by tag" />
       {filterData.map((item) => {
         const avg = item.grades.reduce((prev, curr) => prev + +curr, 0) / item.grades.length;
         item["avg"] = avg;

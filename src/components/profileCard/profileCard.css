@@ -54,3 +54,8 @@
 li > span {
   margin-left: 2rem;
 }
+
+.card-tag {
+  padding: 1rem;
+  width: 300px;
+}
