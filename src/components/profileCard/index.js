@@ -1,6 +1,7 @@
 import React from "react";
 import InputField from "../inputField";
-import Tags from "../Tags";
+import Tags from "../tags";
+import Grades from "../grades";
 import "./profileCard.css";
 
 const ProfileCard = ({ profile }) => {
@@ -43,16 +44,7 @@ const ProfileCard = ({ profile }) => {
             <p>Skill: {skill}</p>
             <p>Average: {avg + "%"}</p>
           </div>
-          {isExpand && (
-            <ul>
-              {grades.map((grade, index) => (
-                <li key={index}>
-                  {`Test ${index + 1}:`}
-                  <span>{grade + "%"}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+          {isExpand && <Grades grades={grades} />}
           {tags.length > 0 && <Tags tags={tags} />}
           <div className="card-tag">
             <InputField placeholder="Add a tag" value={tag} onChange={handleTags} onKeyDown={handleKeyDown} />

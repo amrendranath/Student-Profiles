@@ -42,20 +42,10 @@
   font-size: 44px;
   font-weight: 600;
   cursor: pointer;
-  color: #979797;
-}
-
-.card-info ul {
-  padding: 1rem;
-  line-height: 1.6;
-  font-weight: 300;
-}
-
-li > span {
-  margin-left: 2rem;
+  color: #c3c3c3;
 }
 
 .card-tag {
-  padding: 1rem;
+  padding: 0 1rem;
   width: 300px;
 }
