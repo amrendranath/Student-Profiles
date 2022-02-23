@@ -15,11 +15,18 @@
 .card-info {
   display: inline-block;
   margin: 0 1rem;
+  width: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.1rem;
 }
 
 .card-title {
   text-transform: uppercase;
-  padding-bottom: 1.1rem;
   font-size: 44px;
 }
 
@@ -27,4 +34,23 @@
   margin-left: 1.1rem;
   line-height: 1.5;
   font-weight: 300;
+}
+
+.expand-button {
+  background: transparent;
+  border: none;
+  font-size: 44px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #979797;
+}
+
+.card-info ul {
+  padding: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+li > span {
+  margin-left: 2rem;
 }
