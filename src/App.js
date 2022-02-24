@@ -54,8 +54,8 @@ function App() {
   return (
     <div className="App">
       <div className="search-fields">
-        <InputField value={searchText} onChange={handleSearchText} placeholder="Search by name" />
-        <InputField value={searchTag} onChange={handleSearchTag} placeholder="Search by tag" />
+        <InputField data-testid="search-name" value={searchText} onChange={handleSearchText} placeholder="Search by name" />
+        <InputField data-testid="search-tag" value={searchTag} onChange={handleSearchTag} placeholder="Search by tag" />
       </div>
       {filterData.map((item) => {
         const avg = item.grades.reduce((prev, curr) => prev + +curr, 0) / item.grades.length;

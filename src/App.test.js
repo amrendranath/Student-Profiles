@@ -1,8 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
+test("shows search fields", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const searchNameField = screen.getByTestId("search-name");
+  expect(searchNameField).toBeInTheDocument();
+  const dearchTagField = screen.getByTestId("search-tag");
+  expect(dearchTagField).toBeInTheDocument();
 });
