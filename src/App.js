@@ -30,6 +30,8 @@ function App() {
           `${item.firstName} ${item.lastName}`.toLowerCase().includes(searchText) &&
           item?.tags?.toString().toLowerCase().includes(searchTag)
         );
+      } else if (!searchText && !searchTag) {
+        return true;
       } else if (searchText) {
         return `${item.firstName} ${item.lastName}`.toLowerCase().includes(searchText);
       } else if (searchTag) {
